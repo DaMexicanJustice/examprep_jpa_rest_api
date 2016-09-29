@@ -63,7 +63,7 @@ public class City implements Serializable {
     private Collection<Country> countryCollection;
     @JoinColumn(name = "CountryCode", referencedColumnName = "Code")
     @ManyToOne(optional = false)
-    private Country countryCode;
+    private transient Country countryCode;
 
     public City() {
     }

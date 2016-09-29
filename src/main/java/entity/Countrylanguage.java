@@ -48,7 +48,7 @@ public class Countrylanguage implements Serializable {
     private float percentage;
     @JoinColumn(name = "CountryCode", referencedColumnName = "Code", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Country country;
+    private transient Country country;
 
     public Countrylanguage() {
     }
